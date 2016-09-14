@@ -137,7 +137,7 @@ Insert the following function above `class ViewController: UIViewController { ..
             print("testParseConnection(): object has been saved")  
         }  
     }  
-}  `
+}`
 
 Insert the following line in `viewDidLoad()`:
 

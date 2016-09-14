@@ -110,7 +110,7 @@ If you want to manually compile the SDK, you can find the source code on GitHub.
 
 #### 1.2.5.1 AppDelegate.swift
 
-Add "import Parse".
+Add `import Parse`.
 
 Copy code from starter project into corresponding functions in your own Xcode project.
 
@@ -119,15 +119,15 @@ Insert your own Heroku environment variable values into these variables:
 * $0.applicationId
 * $0.server
 
-Set $0.clientKey = "".
+Set `$0.clientKey = ""`.
 
 #### 1.2.5.2 ViewController.swift
 
-Add "import Parse".
+Add `import Parse`.
 
-Insert the following function above "class ViewController: UIViewController { ... }":
+Insert the following function above `class ViewController: UIViewController { ... }`:
 
-func testParseConnection(table: String, column: String, value: String) {  
+`func testParseConnection(table: String, column: String, value: String) {  
     let testObject = PFObject(className: table)  
     testObject[column] = value  
     testObject.saveInBackgroundWithBlock { (success, error) -> Void in  
@@ -137,11 +137,11 @@ func testParseConnection(table: String, column: String, value: String) {
             print("testParseConnection(): object has been saved")  
         }  
     }  
-}  
+}  `
 
-Insert the following line in viewDidLoad():
+Insert the following line in `viewDidLoad()`:
 
-testParseConnection("test", column: "data", value: "hello ooohber")
+`testParseConnection("test", column: "data", value: "hello ooohber")`
 
 Change parameter values if desired.
 

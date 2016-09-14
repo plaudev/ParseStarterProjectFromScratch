@@ -2,7 +2,7 @@
 
 Patrick Lau @plaudev 2016-09-13
 
-Initiating project without relying on a starter project or 3rd party guides. For use with Rob Percival's iOS 9 Developer Course Lecture #170 Uber App.
+Initiating project without relying on a starter project or 3rd party guides. For use with Rob Percival's iOS 9 Developer Course Lecture #170 Uber App. Instructions along with initial Xcode files you need before any Uber specific code is implemented are provided herein. You just need to insert & link to the required frameworks & libraries as detailed below.
 
 
 ## 1.1 Creating Parse Server on Heroku

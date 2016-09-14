@@ -127,17 +127,17 @@ Add `import Parse`.
 
 Insert the following function above `class ViewController: UIViewController { ... }`:
 
-  `func testParseConnection(table: String, column: String, value: String) {
-    let testObject = PFObject(className: table)
-    testObject[column] = value
-    testObject.saveInBackgroundWithBlock { (success, error) -> Void in
-      if error != nil {
-        print("testParseConnection(): \(error)")
-      } else {
-        print("testParseConnection(): object has been saved")
-      }
+    func testParseConnection(table: String, column: String, value: String) {
+        let testObject = PFObject(className: table)
+        testObject[column] = value
+        testObject.saveInBackgroundWithBlock { (success, error) -> Void in
+            if error != nil {
+                print("testParseConnection(): \(error)")
+            } else {
+                print("testParseConnection(): object has been saved")
+            }
+        }
     }
-  }`
 
 Insert the following line in `viewDidLoad()`:
 

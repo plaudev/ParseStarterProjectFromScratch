@@ -71,16 +71,16 @@ Expand 'Link Binary With Libraries' as shown.
 
 Click the + button in the bottom left of the 'Link Binary With Libraries' section and add the following libraries:
 
-AudioToolbox.framework
-CFNetwork.framework
-CoreGraphics.framework
-CoreLocation.framework
-QuartzCore.framework
-Security.framework
-StoreKit.framework
-SystemConfiguration.framework
-libz.tbd
-libsqlite3.tbd
+* AudioToolbox.framework
+* CFNetwork.framework
+* CoreGraphics.framework
+* CoreLocation.framework
+* QuartzCore.framework
+* Security.framework
+* StoreKit.framework
+* SystemConfiguration.framework
+* libz.tbd
+* libsqlite3.tbd
 
 Note: This is a comprehensive list of dependencies for a typical app. You may be able to omit some of these if you are not using the -ObjC linker flag or if you do not plan to implement Location Services or In-App Purchases, for example.
 
@@ -88,9 +88,13 @@ Note: http://stackoverflow.com/a/31636570/1827488
 
 #### 1.2.3.1 Libraries Needed for Uber App
 
-AudioToolbox.framework
-SystemConfiguration.framework
-libsqlite3.tbd
+* AudioToolbox.framework
+* SystemConfiguration.framework
+* libsqlite3.tbd
+
+#### 1.2.3.4 Libraries Needed for Facebook Login
+
+Please see relevant Parse github.
 
 ### 1.2.4 Other installation options
 
@@ -123,17 +127,17 @@ Add "import Parse".
 
 Insert the following function above "class ViewController: UIViewController { ... }":
 
-func testParseConnection(table: String, column: String, value: String) {
-    let testObject = PFObject(className: table)
-    testObject[column] = value
-    testObject.saveInBackgroundWithBlock { (success, error) -> Void in
-        if error != nil {
-            print("testParseConnection(): \(error)")
-        } else {
-            print("testParseConnection(): object has been saved")
-        }
-    }
-}
+func testParseConnection(table: String, column: String, value: String) {  
+    let testObject = PFObject(className: table)  
+    testObject[column] = value  
+    testObject.saveInBackgroundWithBlock { (success, error) -> Void in  
+        if error != nil {  
+            print("testParseConnection(): \(error)")  
+        } else {  
+            print("testParseConnection(): object has been saved")  
+        }  
+    }  
+}  
 
 Insert the following line in viewDidLoad():
 

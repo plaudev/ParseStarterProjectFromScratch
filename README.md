@@ -11,7 +11,7 @@ https://devcenter.heroku.com/articles/deploying-a-parse-server-to-heroku
 
 ### 1.1.1 Deploy To Heroku
 
-Click purple "Deploy To Heroku" button & follow instructions to create a Parse app on Heroku. Specify a unique application name. A free Heroku is required.
+Click purple "Deploy To Heroku" button & follow instructions to create a Parse app on Heroku. Specify a unique application name. A free Heroku account is required.
 
 #### 1.1.1.1 Heroku Environment Variables
 

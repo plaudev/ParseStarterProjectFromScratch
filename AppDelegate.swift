@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             // Uncomment the following line and change to your Parse Server address;
             // heroku
-            $0.server = "https://__your_masterKey__.herokuapp.com/parse"
+            $0.server = "https://__your_application_name__.herokuapp.com/parse"
             // local
             //$0.server = "http://localhost:1337/parse"
             

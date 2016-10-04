@@ -63,6 +63,21 @@ Drag the Parse.framework and Bolts.framework you downloaded into your Xcode proj
 
 Make sure the "Copy items to destination's group folder" checkbox is checked.
 
+#### 1.2.2.1 Adding ParseUI.framework
+
+For the Snapchat clone (Lecture #209), you will need to use PFImageView() which is found in ParseUI.framework. The latest copy I've managed to find of this framework is found in the link mentioned in #1.2.1, ie v1.12.0. Unzip this library & drag ParseUI.framework into your Xcode project (select "Copy items to destination").
+
+This ParseUI.framework is written in Obj-C which means you will need a bridging header to import it into your Swift project. The easiest way to create a bridging header is to do the following in Xcode:
+
+* File->New->File
+* Select iOs->Source->Objective-C file
+* Name this file (extension .m) anything you want (we will discard it once bridging header is created)
+* When asked "Would you like to configure an Objective-C bridging header?", select yes
+* Once the bridging header is created (filename is likely yourAppName-Bridging-Header.h), you can delete the Objective-C file just created
+* Insert "#import <ParseUI/ParseUI.h>" into the bridging header file
+
+Note: https://www.raywenderlich.com/98831/parse-tutorial-getting-started-web-backends
+
 ### 1.2.3 Add the dependencies
 
 Click on Targets → Your app name → and then the 'Build Phases' tab.
